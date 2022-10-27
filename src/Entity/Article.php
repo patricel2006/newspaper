@@ -17,7 +17,7 @@ class Article
 
 
 
-    use TimestampableEntity;//référence au datetime : c'est comme un include php. Un trait php est une
+    use TimestampableEntity; //référence au datetime : c'est comme un include php. Un trait php est une
     //classe qui se comporte comme un include php avec des propriétés et des méthodes.
     use SoftDeleteableEntity;
 
