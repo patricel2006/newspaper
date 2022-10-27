@@ -1,0 +1,167 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Tableau de bord
+{% endblock %}
+
+{% block body %}
+
+	<h1 class="text-center my-4">Tableau de bord Admin</h1>
+
+	{# ################# FLASHES ################# #}
+	<div class="row">
+		<div class="col-6 mx-auto">
+			{% include 'include/_flashes.html.twig' %}
+		</div>
+	</div>
+	{# ################# FLASHES ################# #}
+
+	{# -------------------------------------------------------------------------------------------------- #}
+
+	{# ################# BUTTONS ################# #}
+		<div class="row"> <div class="d-flex justify-content-around">
+			<div class="col-4">
+				<a class=" btn btn-sm btn-outline-dark" href="">Ajouter un article</a>
+			</div>
+			<div class="col-4">
+				<a class=" btn btn-sm btn-outline-dark" href="">Ajouter une catégorie</a>
+			</div>
+			<div class="col-4">
+				<a class=" btn btn-sm btn-outline-dark" href="">Voir les archives</a>
+			</div>
+		</div>
+
+	</div>
+	{# ################# BUTTONS ################# #}
+
+	{# -------------------------------------------------------------------------------------------------- #}
+
+	{# ################# TABLE 1 ################# #}
+		<div class="row"> <div class="col-10 mx-auto my-4">
+
+			<h2 class="text-center">Tous les articles</h2>
+
+			<table class="table">
+				<thead class="table-dark">
+					<tr>
+						<th>#</th>
+						<th>Titre</th>
+						<th>Contenu</th>
+						<th>Catégorie</th>
+						<th>Auteur</th>
+						<th>Crée le</th>
+						<th>Actions</th>
+					</tr>
+				</thead>
+				<tbody>
+					{#                {% for article in articles %}#}
+					{#                <tr>#}
+					{#                    <td class="text-center"></td>#}
+					{#                    <td class="text-center"></td>#}
+					{#                    <td class="text-center"></td>#}
+					{#                    <td class="text-center"></td>#}
+					{#                    <td class="text-center"></td>#}
+					{#                    <td class="text-center"></td>#}
+					{#                    <td class="text-center">#}
+					{#                        <a href="" class="text-info" title="Modifier l'article"><i class="fa fa-edit"></i></a>#}
+					{#                        <a href="" class="text-danger" title="Archiver l'article" onclick="return confirm('Voulez-vous archiver cet article ?')"><i class="fa fa-trash"></i></a>#}
+					{#                    </td>#}
+					{#                </tr>#}
+					{#                {% else %}#}
+						<tr>
+							<td colspan="7" class="bg-info text-center align-middle"> Aucun article publié</td>
+					</tr>
+					{#                {% endfor %}#}
+				</tbody>
+			</table>
+
+		</div>
+	</div>
+	{# ################# TABLE 1 ################# #}
+
+	{# -------------------------------------------------------------------------------------------------- #}
+
+	<div
+		class="row">
+		{# ################# TABLE 2 ################# #}
+		<div class="col-6">
+
+			<h2 class="text-center">Toutes les catégories</h2>
+
+			<table class="table">
+				<thead class="table-dark">
+					<tr>
+						<th>#</th>
+						<th>Nom</th>
+						<th>Alias</th>
+						<th>Créée le</th>
+						<th>Actions</th>
+					</tr>
+				</thead>
+				<tbody>
+					{#                    {% for category in categories %}#}
+					{#                        <tr>#}
+					{#                            <td class="text-center"></td>#}
+					{#                            <td class="text-center"></td>#}
+					{#                            <td class="text-center"></td>#}
+					{#                            <td class="text-center"></td>#}
+					{#                            <td class="text-center">#}
+					{#                                <a href="" class="text-info" title="Modifier la catégorie"><i class="fa fa-edit"></i></a>#}
+					{#                                <a href="" class="text-danger" title="Archiver la catégorie" onclick="return confirm('Voulez-vous archiver cette catégorie ?')"><i class="fa fa-trash"></i></a>#}
+					{#                            </td>#}
+					{#                        </tr>#}
+					{#                    {% else %}#}
+						<tr>
+							<td colspan="5" class="bg-info text-center align-middle"> Aucune catégorie ajoutée</td>
+					</tr>
+					{#                    {% endfor %}#}
+				</tbody>
+			</table>
+		</div>
+		{# ################# TABLE 2 ################# #}
+
+		{# -------------------------------------------------------------------------------------------------- #}
+
+		{# ################# TABLE 3 ################# #}
+			<div class="col-6"> <h2 class="text-center">Tous les utilisateurs</h2>
+
+			<table class="table">
+				<thead class="table-dark">
+					<tr>
+						<th>#</th>
+						<th>Prénom</th>
+						<th>Nom</th>
+						<th>Email</th>
+						<th>Rôle</th>
+						<th>Inscrit le</th>
+						<th>Actions</th>
+					</tr>
+				</thead>
+				<tbody>
+					{#                    {%  for user in users %}#}
+
+					{#                        <tr>#}
+					{#                            <td class="text-center"></td>#}
+					{#                            <td class="text-center"></td>#}
+					{#                            <td class="text-center"></td>#}
+					{#                            <td class="text-center"></td>#}
+					{#                            <td class="text-center"></td>#}
+					{#                            <td class="text-center"></td>#}
+					{#                            <td class="text-center">#}
+					{#                                <a href="#" class="text-warning" title="Modifier le rôle"><i class="fa fa-user-edit"></i></a>#}
+					{#                            </td>#}
+					{#                        </tr>#}
+
+					{#                    {% else %}#}
+						<tr>
+							<td colspan="7" class="bg-info text-center align-middle"> Aucun utilisateur inscrit</td>
+					</tr>
+					{#                    {% endfor %}#}
+				</tbody>
+			</table>
+		</div>
+		{# ################# TABLE 3 ################# #}
+	</div>
+
+	{# -------------------------------------------------------------------------------------------------- #}
+
+{% endblock %}
